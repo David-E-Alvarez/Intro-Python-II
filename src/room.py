@@ -10,3 +10,4 @@ class Room:
     
     def __str__(self):
         return f"Room name: {self.name} - Room description: {self.description}"
+    
