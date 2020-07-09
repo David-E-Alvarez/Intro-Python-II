@@ -39,28 +39,36 @@ room['treasure'].s_to = room['narrow']
 
 
 # Make a new player object that is currently in the 'outside' room.
-player1 = Player("Jack", Room(room["outside"].name, room["outside"].description))
-
-
+player1 = Player("Jack", room["outside"])
 
 # Write a loop that:
 #
-# while True:#what ends this?
-#     # * [x]Prints the current room name
-#     print(f"current room: {player1.room.name}\n")
-#     # * [x]Prints the current description (the textwrap module might be useful here).
-#     print(f"room description: {player1.room.description}\n")
-#     # * [x]Waits for user input and decides what to do.
-#     # [x]If the user enters "q", quit the game.
-#     user_input = input("press n for north, e for east, s for south, w for west, or q to quit please : ")
-#     # If the user enters a cardinal direction, attempt to move to the room there.
-#     # Print an error message if the movement isn't allowed.
+while True:#what ends this?
+    # * [x]Prints the current room name
+    print(f"current room: {player1.room.name}\n")
 
-#     # if someone presses 'n' go to foyer(player always begins outside )
-#     # can player go in the direction user wants to
-#     # let user know they cant go in desired direction
-#     if user_input == 'n':
-#         player1.room = room["foyer"].name
+    # * [x]Prints the current description (the textwrap module might be useful here).
+    print(f"room description: {player1.room.description}\n")
+
+    # * [x]Waits for user input and decides what to do.
+    user_input = input("press n for north, e for east, s for south, w for west, or q to quit please : ")
     
-#     if user_input == 'q':
-#         break
+    # If the user enters a cardinal direction, attempt to move to the room there.
+    # Print an error message if the movement isn't allowed.
+        #why wouldn't a movement be alowed? how wouldn't it be allowed?
+
+    # if someone presses 'n' go to foyer(player always begins outside )
+    # if not let user know they cant go in desired direction
+    if user_input == 'n': # can player go in the direction user wants to?
+        if player1.room.n_to is not None:
+            player1.room = player1.room.n_to
+        else:
+            print('cant go in that direction')
+    if user_input == 'e':
+        print('sorry cant go there')
+    
+
+    
+    # [x]If the user enters "q", quit the game.
+    if user_input == 'q':
+        break
