@@ -1,2 +1,12 @@
 # Implement a class to hold room information. This should have name and
 # description attributes.
+
+
+class Room:
+    ### "room" with "name" and "description" attributes
+    def __init__(self,name,description):
+        self.name = name
+        self.description = description
+    
+    def __str__(self):
+        return f"Room name: {self.name} - Room description: {self.description}"

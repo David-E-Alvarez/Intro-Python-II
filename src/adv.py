@@ -1,8 +1,8 @@
 from room import Room
-
+from player import Player
 # Declare all the rooms
 
-room = {
+room = {# "room" is a dictionary. What do I know about Python dictionaries?
     'outside':  Room("Outside Cave Entrance",
                      "North of you, the cave mount beckons"),
 
@@ -37,13 +37,18 @@ room['treasure'].s_to = room['narrow']
 # Main
 #
 
-# Make a new player object that is currently in the 'outside' room.
 
+# Make a new player object that is currently in the 'outside' room.
+player1 = Player("Jack", room["outside"].name)
+print('----->',player1.room)
 # Write a loop that:
 #
-# * Prints the current room name
-# * Prints the current description (the textwrap module might be useful here).
-# * Waits for user input and decides what to do.
+#while True:
+# * []Prints the current room name
+    #print('----->',player1.room)
+# * []Prints the current description (the textwrap module might be useful here).
+    
+# * []Waits for user input and decides what to do.
 #
 # If the user enters a cardinal direction, attempt to move to the room there.
 # Print an error message if the movement isn't allowed.

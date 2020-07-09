@@ -1,0 +1,4 @@
+-this print statement prints the "str" method from the "room" class
+    -print(room["outside"]) => Room name: Outside Cave Entrance- Room description: North of you, the cave mount beckons
+
+-"room["outside"]" access the value where "outside" is the key in this dictionary

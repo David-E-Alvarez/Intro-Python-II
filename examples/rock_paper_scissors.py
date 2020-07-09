@@ -3,7 +3,8 @@ import random
 
 #file i/o functions for historical results
 def load_results():
-    text_file = open("history.txt", "r")
+    text_file = open("/home/david/CS_hw/python/Intro-Python-II/examples/history.txt", "r")
+    # /home/david/CS_hw/python/Intro-Python-II/examples/history.txt
     history = text_file.read().split(",")
     text_file.close()
     return history
