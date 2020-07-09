@@ -40,21 +40,27 @@ room['treasure'].s_to = room['narrow']
 
 # Make a new player object that is currently in the 'outside' room.
 player1 = Player("Jack", Room(room["outside"].name, room["outside"].description))
-print(player1.room.description)
 
-#print('room["outside"].name: ',room["outside"].name)
-#print('room["outside"]: ',room["outside"] )
+
 
 # Write a loop that:
 #
-while True:#what ends this?
-    # * [x]Prints the current room name
-    print(f"you're currently in the {player1.room}")
-    # * []Prints the current description (the textwrap module might be useful here).
-    print(f"")
-    # * []Waits for user input and decides what to do.
-    #
-    # If the user enters a cardinal direction, attempt to move to the room there.
-    # Print an error message if the movement isn't allowed.
-    #
-    # If the user enters "q", quit the game.
+# while True:#what ends this?
+#     # * [x]Prints the current room name
+#     print(f"current room: {player1.room.name}\n")
+#     # * [x]Prints the current description (the textwrap module might be useful here).
+#     print(f"room description: {player1.room.description}\n")
+#     # * [x]Waits for user input and decides what to do.
+#     # [x]If the user enters "q", quit the game.
+#     user_input = input("press n for north, e for east, s for south, w for west, or q to quit please : ")
+#     # If the user enters a cardinal direction, attempt to move to the room there.
+#     # Print an error message if the movement isn't allowed.
+
+#     # if someone presses 'n' go to foyer(player always begins outside )
+#     # can player go in the direction user wants to
+#     # let user know they cant go in desired direction
+#     if user_input == 'n':
+#         player1.room = room["foyer"].name
+    
+#     if user_input == 'q':
+#         break

@@ -2,3 +2,10 @@
     -print(room["outside"]) => Room name: Outside Cave Entrance- Room description: North of you, the cave mount beckons
 
 -"room["outside"]" access the value where "outside" is the key in this dictionary
+
+-#print(player1.room.description)- this prints room description for an instance of player class
+
+-print('room["outside"].name: ',room["outside"].name)
+    --->room["outside"].name:  Outside Cave Entrance
+-print('room["outside"]: ',room["outside"] )
+    --->room["outside"]:  Outside Cave EntranceNorth of you, the cave mount beckons

@@ -9,5 +9,5 @@ class Room:
         self.description = description
     
     def __str__(self):
-        return f"Room name: {self.name} - Room description: {self.description}"
+        return f"{self.name}{self.description}"
     
