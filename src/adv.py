@@ -65,8 +65,20 @@ while True:#what ends this?
         else:
             print('cant go in that direction')
     if user_input == 'e':
-        print('sorry cant go there')
-    
+        if player1.room.e_to is not None:
+            player1.room = player1.room.e_to
+        else:
+            print('cant go in that direction')
+    if user_input == 's':
+        if player1.room.s_to is not None:
+            player1.room = player1.room.s_to
+        else:
+            print('cant go in that direction')
+    if user_input == 'w':
+        if player1.room.w_to is not None:
+            player1.room = player1.room.w_to
+        else:
+            print('cant go in that direction')
 
     
     # [x]If the user enters "q", quit the game.
